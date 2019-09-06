@@ -2,5 +2,5 @@ https://docs.google.com/document/d/16sQkvzrdNdGKfPJIDh0T3n6vc4n5VH1urgH0qUqftMk/
 
 Project Proposal Overview - Johnny
 System Environment Diagram - Johnny & Khoa
-Function Requirements & Diagram - Khoa
-Nonfunction Requirements - Tom
+Functional Requirements & Diagram - Khoa
+Nonfunctional Requirements - Tom
