@@ -3,5 +3,5 @@ https://docs.google.com/document/d/16sQkvzrdNdGKfPJIDh0T3n6vc4n5VH1urgH0qUqftMk/
 Project Proposal Overview - Johnny
 System Environment Diagram - Johnny & Khoa
 Functional Requirements & Diagram - Khoa
-Nonfunctional Issues w/ Tech stack - Tom
+Nonfunctional Issues w/ Tech stack - Yu Xiao
 List of Nonfunctuonal Requirements - Johnny
