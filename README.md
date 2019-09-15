@@ -19,3 +19,17 @@ Khoa Pham
 ![](img/2019-09-10-13-22-02.png)
 ---
 
+
+### `first we implement a streaming music project `
+- some icon color:
+`#07D159`
+---
+
+---
+### `Login UI`
+![](img/2019-09-15-13-03-22.png)
+---
+
+### `Register UI`
+![](img/2019-09-15-13-03-53.png)
+---
