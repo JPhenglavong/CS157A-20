@@ -8,7 +8,8 @@ Khoa Pham
 ---
 
 ### `Create a database for our team20`
--> `CREATE DATABASE IF NOT EXISTS team20;`
+- create team-20 table
+`CREATE DATABASE IF NOT EXISTS team20;`
 ---
 ![](img/2019-09-10-13-19-44.png)
 ---
@@ -22,7 +23,6 @@ Khoa Pham
 `#07D159`
 ---
 
----
 ### `Login UI`
 ![](img/2019-09-15-13-03-22.png)
 ---
