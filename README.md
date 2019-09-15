@@ -1,13 +1,10 @@
-# CS157A-20
-Group 20
+# CS157A Team-20
 -------------------
 Team Members:
 Johnny Phenglavong,
 Khoa Pham
 & Yu Xiao Zheng
 
-
----
 ---
 
 ### `Create a database for our team20`
