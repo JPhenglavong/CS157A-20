@@ -1,5 +1,5 @@
 # CS157A Team-20
--------------------
+
 Team Members:
 Johnny Phenglavong,
 Khoa Pham
