@@ -34,8 +34,7 @@
 
 
 
-
-	$con = mysqli_connect("localhost", "root", "", "team20");
+	$con = mysqli_connect("127.0.0.1", "root", "yourpasswordhere", "yourDBnamehere");
 	if($con){
         echo "Connected database successfully";
     }

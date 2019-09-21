@@ -104,7 +104,7 @@ switchButton('registerButton');
             </div>
 
             <div id="loginText">
-                <h1>CS157A Team-20 Streming Music </h1>
+                <h1>CS157A Team-20 Streaming Music </h1>
                 <h2>Listen our songs for free</h2>
                 <ul>
                     <li>Discover music you'll fall in love with</li>
