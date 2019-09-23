@@ -1,0 +1,33 @@
+Our users will be all of the movie-goers. They can register for an account that includes all the films they'd love to watch when 
+release dates arrive along with a reminder timetable. Registering for an account is necessary for the users to keep track of their 
+timetable. After logging in to the account, they can see a list of upcoming movies, and they can decide if they want to be reminded when 
+the movie comes. In addition, clients can drop ratings to the film so that other clients can see and do so. Another feature is to also 
+include a quick questionnaire on whether the user has seen the movie, does not want to be reminded anymore or to extend the reminder.
+
+
+
+
+
+
+
+
+
+
+List of functional requirements including database operations:
+For the movie customer:
+Register functioning: Customers can register for an account included ID and password.
+Login functioning: Customers can use the account to login to the website. 
+Customers can add music(s) into their list
+Customers can remove music(s) from their list
+Customers can change the music(s) they want to be reminds
+Customers can search for the music(s)
+Customer can view their list of adding music(s)
+For the Admin/ Manager of the Music Website: 
+Manager can remove music(s) from customers’ list (for no longer available movies)
+Manager can add new music(s) to the database system
+Manager can remove music(s)from the database system
+Manager can search for the music(s)in the system
+Manager can view the customers’ list of music
+For Back-end,
+We will operate the data on our Website Backstage
+Using Spring-boot tech to implement the Back-End operation
