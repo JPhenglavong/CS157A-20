@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['loginButton'])) {
 	//Login button was pressed
     $username = $_POST['loginUsername'];
@@ -12,4 +13,11 @@ if(isset($_POST['loginButton'])) {
         header("Location: index.php");
     }
 }
+
+function getInputValue($name) {
+    if(isset($_POST[$name])) {
+        echo $_POST[$name];
+    }
+}
+
 ?>
