@@ -9,11 +9,6 @@
     include("includes/handlers/login-handler.php");
     include("includes/handlers/switchBtn.php");
 
-	function getInputValue($name) {
-		if(isset($_POST[$name])) {
-			echo $_POST[$name];
-		}
-	}
 ?>
 
 <html lang="">
