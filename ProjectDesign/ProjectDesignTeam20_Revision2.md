@@ -42,37 +42,74 @@ Dependency:
 
 Schemas: 
 
-       1. register(ID, firstname, last name, email, password)
+1.
+```sql
+register(ID, firstname, last name, email, password)
+```
+       
 ![Screenshot_3](https://user-images.githubusercontent.com/45501926/66726205-c2eeb780-edec-11e9-8aa1-342420201e92.png)
 
-        2. User(ID, username, password)\
+2.
+```sql
+User(ID, username, password)\
+```
+   
 ![Screenshot_1](https://user-images.githubusercontent.com/45501926/66726227-eca7de80-edec-11e9-81fe-c59a7bf25f93.png)
 
-         3. Playlist(ID, name)\
+3.
+```sql
+Playlist(ID, name)
+``` 
 ![Screenshot_2](https://user-images.githubusercontent.com/45501926/66726240-034e3580-eded-11e9-9811-7b0b95db163a.png)
 
-         4. song(ID, fileFormat, title)\
+4.
+```sql
+song(ID, fileFormat, title)
+```
 ![Screenshot_4](https://user-images.githubusercontent.com/45501926/66726253-152fd880-eded-11e9-8bda-32564091dac5.png)
 
-         5. album(ID, year, name)
+5.
+```sql
+album(ID, year, name)
+```
+
 ![Screenshot_5](https://user-images.githubusercontent.com/45501926/66726277-34c70100-eded-11e9-8aa6-2b589003b1bc.png)
 
-         6. Artist (ID, name, country)
+6.
+```sql
+Artist (ID, name, country)
+```
 ![Screenshot_1](https://user-images.githubusercontent.com/45501926/66726293-4dcfb200-eded-11e9-8b5b-3787783e292d.png)
 
-          7.will(regiterID, UserID)
+7.
+```sql
+will(regiterID, UserID)
+```
 ![Screenshot_2](https://user-images.githubusercontent.com/45501926/66726340-a4d58700-eded-11e9-99c9-e1216dfefd83.png)
 
-          8.Plays (userID, playlistID)
+8.
+```sql
+Plays (userID, playlistID)
+```
+          
 ![Screenshot_3](https://user-images.githubusercontent.com/45501926/66726343-aa32d180-eded-11e9-9a20-f0858d3ccefe.png)
 
-          9.contains(playlistID, songID)
+9.
+```sql
+contains(playlistID, songID)
+```
 ![Screenshot_4](https://user-images.githubusercontent.com/45501926/66726344-ad2dc200-eded-11e9-8295-94f9ba6056e7.png)
 
-          10.include(songID, albumID)
+10.
+```sql
+include(songID, albumID)
+```
 ![Screenshot_5](https://user-images.githubusercontent.com/45501926/66726347-b028b280-eded-11e9-982c-4d1c83b2f8f2.png)
 
-          11.create(artistID, albumID)
+11.
+```sql
+create(artistID, albumID)
+```
 ![Screenshot_6](https://user-images.githubusercontent.com/45501926/66726356-b4ed6680-eded-11e9-8172-8c373cb2f8e9.png)
 
 
