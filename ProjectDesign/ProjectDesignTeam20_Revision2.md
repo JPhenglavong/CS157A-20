@@ -13,15 +13,13 @@ Entities:
 3.  Artist: Content creators for our music platform.
 4.  Album: A collection of songs from artists.
 5.  Playlist: User selected collection of music.
-6.  Register: user will have to register for an account so that they can perform creating a playlist
 
 Attributes: 
-1.  User: Username, password, ID.
-2.  Song: ID, Title and Duration.
+1.  User: Username, password, ID, Lastname, firstname, email, profilePic, signUpDate.
+2.  Song: ID, Title and Duration, artist, album, genre, plays,path, albumOrder.
 3.  Artist: Name, Country, and ID.
-4.  Album: ID, Name and Year.
+4.  Album: ID, Name and artist, artworkpath.
 5.  Playlist: ID, and Name.
-6.  Register: ID, first name, password, email, Lastname, username
 
 Relationships:
 1.  Plays: The user with a user account can play music in the playlist
@@ -30,7 +28,6 @@ Relationships:
 4.  Contains: The playlist will contain a number of songs, which can be none
 5.  Include: Song is included in a specific album
 6.  Create: An artist will create an album
-7.  Will: a user will register for an account to get some advance ability like making a playlist
 
 Dependency:
 1.  A user with an account can play one playlist at a time
@@ -38,7 +35,7 @@ Dependency:
 3.  A song can only be in one album but an album can have many songs
 4.  An album can only be created by one artist but an artist can create many albums
 
-![cs157a_ERD](https://user-images.githubusercontent.com/45501926/66868028-678a0a00-ef51-11e9-9332-fac3800c4b84.png)
+![cs157a_ERD (1)](https://user-images.githubusercontent.com/45501926/66868323-fa2aa900-ef51-11e9-8323-bf7a036aefe3.png)
 
 Schemas: 
 
