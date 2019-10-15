@@ -55,9 +55,10 @@ Playlist(ID, name)
 
 3.
 ```sql
-song(ID, fileFormat, title)
+songs(ID, Title and Duration, artist, album, genre, plays,path, albumOrder)
 ```
-![Screenshot_4](https://user-images.githubusercontent.com/45501926/66726253-152fd880-eded-11e9-8bda-32564091dac5.png)
+![Screenshot_333](https://user-images.githubusercontent.com/45501926/66871452-8b048300-ef58-11e9-8f6a-5701c21c11d3.png)
+
 
 4.
 ```sql
