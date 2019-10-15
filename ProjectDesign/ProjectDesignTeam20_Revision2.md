@@ -35,7 +35,7 @@ Dependency:
 3.  A song can only be in one album but an album can have many songs
 4.  An album can only be created by one artist but an artist can create many albums
 
-![cs157a_ERD (1)](https://user-images.githubusercontent.com/45501926/66868323-fa2aa900-ef51-11e9-8323-bf7a036aefe3.png)
+![cs157a_ERD](https://user-images.githubusercontent.com/45501926/66872408-cacc6a00-ef5a-11e9-86e5-8afc25c3e994.png)
 
 Schemas: 
 
