@@ -62,10 +62,10 @@ songs(ID, Title and Duration, artist, album, genre, plays,path, albumOrder)
 
 4.
 ```sql
-album(ID, year, name)
+album(ID, Name and artist, artworkpath)
 ```
 
-![Screenshot_5](https://user-images.githubusercontent.com/45501926/66726277-34c70100-eded-11e9-8aa6-2b589003b1bc.png)
+![Screenshot_](https://user-images.githubusercontent.com/45501926/66872150-21857400-ef5a-11e9-820a-bf5a13f34d72.png)
 
 5.
 ```sql
@@ -110,124 +110,7 @@ play(userID, songID)
 ```
 ![Screenshot_346](https://user-images.githubusercontent.com/45501926/66871684-05cd9e00-ef59-11e9-8d72-08e7bfdc2ab2.png)
 ---
-### SQL codes
-```sql
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(25) NOT NULL,
-  `firstName` varchar(50) NOT NULL,
-  `lastName` varchar(50) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(40) NOT NULL,
-  `signUpDate` datetime NOT NULL,
-  `profilePic` varchar(500) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE MyISAM;
 
---
-
-CREATE TABLE `team20`.`Songs` ( 
-    `id` INT NOT NULL AUTO_INCREMENT , 
-    `title` VARCHAR(250) NOT NULL , 
-    `artist` INT NOT NULL , 
-    `album` INT NOT NULL , 
-    `genre` INT NOT NULL , 
-    `duration` VARCHAR(8) NOT NULL , 
-    `path` VARCHAR(500) NOT NULL , 
-    `albumOrder` INT NOT NULL , 
-    `plays` INT NOT NULL , PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
-
---
-
-CREATE TABLE `team20`.`genres` ( 
-    `id` INT NOT NULL AUTO_INCREMENT , 
-    `name` VARCHAR(50) NOT NULL , 
-    PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
-
-
---
-
-CREATE TABLE `team20`.`artists` ( 
-    `id` INT NOT NULL AUTO_INCREMENT , 
-    `name` VARCHAR(50) NOT NULL , 
-    PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
-
-
---
-
-CREATE TABLE `team20`.`albums` (
-     `id` INT NOT NULL AUTO_INCREMENT , 
-     `title` VARCHAR(250) NOT NULL , 
-     `artist` INT NOT NULL , 
-     `genre` INT NOT NULL , 
-     `artworkPath` VARCHAR(500) NOT NULL , 
-     PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
-
-
-
-INSERT INTO `artists` (`id`, `name`) 
-    VALUES (NULL, 'Tom Zheng'), 
-    (NULL, 'Yuxiao Zheng')
-
-INSERT INTO `artists` (`id`, `name`) 
-    VALUES (NULL, 'Horseman'), 
-    (NULL, 'Mike Wu');
---
-
-
-INSERT INTO `genres` (`id`, `name`) 
-    VALUES (NULL, 'Rock'), 
-    (NULL, 'Pop'), 
-    (NULL, 'Hip-hop'), 
-    (NULL, 'Rap'), 
-    (NULL, 'R & B'), 
-    (NULL, 'Classical'), 
-    (NULL, 'Techno'), 
-    (NULL, 'Jazz'), 
-    (NULL, 'Folk'), 
-    (NULL, 'Country');
-
-
---
-
-INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) 
-    VALUES (NULL, 'Macbook Pro 15', '2', '4', 'assets/images/artwork/album.png'), 
-    (NULL, 'De Anza College', '5', '10', 'assets/images/artwork/react.png'),
-    (NULL, 'Tom Zheng', '3', '1', 'assets/images/artwork/alb.png'),
-    (NULL, 'C++', '2', '9', 'assets/images/artwork/react.png'),
-    (NULL, 'MySQL', '1', '3', 'assets/images/artwork/alb.png'),
-    (NULL, 'JDBC', '3', '6', 'assets/images/artwork/album.png'),
-    (NULL, 'React.JS', '4', '7', 'assets/images/artwork/alb.png');
-
-
-INSERT INTO `Songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
-(1, 'Intro', 1, 5, 8, '2:37', 'assets/music/intro.mp3', 1, 0),
-(2, 'Intro', 1, 5, 1, '2:35', 'assets/music/hello.mp3', 2, 0),
-(3, 'C++', 1, 5, 2, '2:33', 'assets/music/intro.mp3', 3, 0),
-(4, 'Java', 1, 5, 3, '2:02', 'assets/music/intro.mp3', 4, 0),
-(5, 'De Anza', 1, 5, 4, '1:29', 'assets/music/intro.mp3', 5, 0),
-(6, 'College', 2, 1, 1, '4:04', 'assets/music/intro.mp3', 1, 0),
-(7, 'Javascript', 2, 4, 2, '3:07', 'assets/music/intro.mp3', 2, 0),
-(8, 'python', 2, 1, 3, '3:08', 'assets/music/intro.mp3', 2, 0),
-(9, 'Intro', 2, 1, 4, '8:03', 'assets/music/intro.mp3', 3, 0),
-(10, 'Intro', 2, 4, 5, '2:58', 'assets/music/intro.mp3', 3, 0),
-(11, 'Hello world', 2, 1, 6, '2:59', 'assets/music/intro.mp3', 4, 0),
-(12, 'apple', 2, 1, 7, '2:03', 'assets/music/intro.mp3', 5, 0),
-(13, 'mouse', 3, 6, 8, '4:21', 'assets/music/intro.mp3', 5, 0),
-(14, 'shen jing bing', 3, 6, 9, '1:45', 'assets/music/intro.mp3', 4, 0),
-(15, 'Tom', 3, 6, 10, '1:44', 'assets/music/intro.mp3', 3, 0),
---
-
-
-
-
-
-
-```
 
 
 
