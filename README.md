@@ -15,6 +15,19 @@ Khoa Pham
 ---
 - create a table
 ![](img/2019-09-25-19-54-54.png)
+```sql
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(25) NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `signUpDate` datetime NOT NULL,
+  `profilePic` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE MyISAM;
+```
 ---
 
 
@@ -32,4 +45,10 @@ Khoa Pham
 ---
 ![](img/2019-09-15-14-15-42.png)
 ---
+
+
+### after login,
+![](img/2019-10-15-10-47-36.png)
+---
+
 
