@@ -104,6 +104,11 @@ create(artistID, albumID)
 ```
 ![Screenshot_6](https://user-images.githubusercontent.com/45501926/66726356-b4ed6680-eded-11e9-8172-8c373cb2f8e9.png)
 
+11.
+```sql
+play(userID, songID)
+```
+![Screenshot_346](https://user-images.githubusercontent.com/45501926/66871684-05cd9e00-ef59-11e9-8d72-08e7bfdc2ab2.png)
 ---
 ### SQL codes
 ```sql
