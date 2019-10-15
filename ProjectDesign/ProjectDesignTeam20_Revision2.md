@@ -51,10 +51,11 @@ register(ID, firstname, last name, email, password)
 
 2.
 ```sql
-User(ID, username, password)\
+User(ID, username, password)
 ```
    
-![Screenshot_1](https://user-images.githubusercontent.com/45501926/66726227-eca7de80-edec-11e9-81fe-c59a7bf25f93.png)
+![Screenshot_123](https://user-images.githubusercontent.com/45501926/66866404-10cf0100-ef4e-11e9-8e87-3305cf9d36e5.png)
+
 
 3.
 ```sql
