@@ -79,6 +79,7 @@ Artist (ID, name, country)
 ```sql
 rating (UserID,SongID)
 ```
+![Screenshot_32](https://user-images.githubusercontent.com/45501926/66867224-b2a31d80-ef4f-11e9-85da-306cd53d177f.png)
 
 7.
 ```sql
