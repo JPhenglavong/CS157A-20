@@ -20,7 +20,6 @@ if(isset($_POST['registerButton'])) {
 	echo $firstName; //test if successful
 }
 
-
 function sanitizeFormPassword($inputText) {
 	$inputText = strip_tags($inputText);
 	return $inputText;
@@ -40,5 +39,9 @@ function sanitizeFormString($inputText) {
 	$inputText = ucfirst(strtolower($inputText));
 	return $inputText;
 }
+
+
+
+
 
 ?>

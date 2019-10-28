@@ -1,7 +1,6 @@
 <?php
 	include("includes/config.php");
 	include("includes/classes/Account.php");
-	include("includes/classes/Constants.php");
 
 	$account = new Account($con);
 
@@ -14,11 +13,12 @@
 <html lang="">
 <head>
 	<title>Welcome to Streaming Music!</title>
-    <link rel="stylesheet" type="text/css" href="component/css/register.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/register.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="component/js/register.js"></script>
+    <script src="assets/js/register.js"></script>
 </head>
 <body>
+
 <?php
 switchButton('registerButton');
 ?>
@@ -29,7 +29,7 @@ switchButton('registerButton');
                 <form id="loginForm" action="register.php" method="POST">
                     <h2>Login to your account</h2>
                     <p>
-                        <?php echo $account->getError(Constants::$loginFailed); ?>
+                        <?php echo $account->getError("Your username or password was incorrect"); ?>
                         <label for="loginUsername">Username</label>
                         <input id="loginUsername" name="loginUsername" type="text" placeholder="username" 
                         value="<?php getInputValue('loginUsername') ?>" required>
@@ -50,36 +50,35 @@ switchButton('registerButton');
                 <form id="registerForm" action="register.php" method="POST">
                     <h2>Create your free account</h2>
                     <p>
-                        <?php echo $account->getError(Constants::$usernameCharacters); ?>
-                        <?php echo $account->getError(Constants::$usernameTaken); ?>
+                        <?php echo $account->getError("Your username must be between 3 and 25 characters"); ?>
+                        <?php echo $account->getError("Your username already exists"); ?>
                         <label for="username">Username</label>
                         <input id="username" name="username" type="text" placeholder="username" value="<?php getInputValue('username') ?>" required>
                     </p>
 
                     <p>
-                        <?php echo $account->getError(Constants::$firstNameCharacters); ?>
+                        <?php echo $account->getError("Your first name must be between 2 and 25 characters"); ?>
                         <label for="firstName">First name</label>
                         <input id="firstName" name="firstName" type="text" placeholder="first name" value="<?php getInputValue('firstName') ?>" required>
                     </p>
 
                     <p>
-                        <?php echo $account->getError(Constants::$lastNameCharacters); ?>
+                        <?php echo $account->getError("Your last name must be between 2 and 25 characters"); ?>
                         <label for="lastName">Last name</label>
                         <input id="lastName" name="lastName" type="text" placeholder="last name" value="<?php getInputValue('lastName') ?>" required>
                     </p>
 
                     <p>
-                        <?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
-                        <?php echo $account->getError(Constants::$emailInvalid); ?>
-                        <?php echo $account->getError(Constants::$emailTaken); ?>
+                        <?php echo $account->getError("Your email is invalid"); ?>
+                        <?php echo $account->getError("This email is already in use"); ?>
                         <label for="email">Email</label>
                         <input id="email" name="email" type="email" placeholder="name@gmail.com" value="<?php getInputValue('email') ?>" required>
                     </p>
 
                     <p>
-                        <?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
-                        <?php echo $account->getError(Constants::$passwordIsIllegal); ?>
-                        <?php echo $account->getError(Constants::$passwordCharacters); ?>
+                        <?php echo $account->getError("Your passwords don't match"); ?>
+                        <?php echo $account->getError("Your password can only contain numbers and letters"); ?>
+                        <?php echo $account->getError("Your password must be between 5 and 30 characters"); ?>
                         <label for="password">Password</label>
                         <input id="password" name="password" type="password" placeholder="Your password" required>
                     </p>
