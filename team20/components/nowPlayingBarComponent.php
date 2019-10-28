@@ -5,7 +5,6 @@
         <div id="nowPlayingLeft">
                 <div class="content">
                     <span class="albumLink">
-                        <!-- <img src="https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg" class="albumArtwork"> -->
                         <img src="assets/images/icons/react.png" class="albumArtwork">
                     </span>
 

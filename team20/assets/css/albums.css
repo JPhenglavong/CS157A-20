@@ -13,10 +13,15 @@
 }
 
 .gridViewItem img {
-    width: 100%;
+    width: 80%;
+    /* Note: if you change the width of .gridViewItem's img, 
+    you also need to change .gridViewInfo's width 
+     */
 }
 
 .gridViewInfo {
+    width: 80%; 
+    /* Note the info's width should follow .gridViewItem's width */
     font-weight: 300;
     text-align: center;
     padding: 5px 0;

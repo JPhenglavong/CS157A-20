@@ -17,10 +17,20 @@
             if (mysqli_num_rows($query) == 1) {
                 return true;
             } else {
-                array_push($this->errorArray, Constants::$loginFailed);
+                array_push($this->errorArray, "Your username or password was incorrect");
                 return false;
             }
-        }
+		}
+		
+		/**
+		 * For security function
+		 */
+		public function encryptPassword($password){
+			$salt1 = "*&g!";
+			$salt2 = "hb%$";
+			$token = hash('ripemd128', "$salt1$password$salt2");
+			return $token;
+		}
 
 		public function register($un, $fn, $ln, $em, $pw, $pw2) {
 			$this->validateUsername($un);
@@ -46,15 +56,6 @@
 			return "<span class='errorMessage'>$error</span>";
 		}
 
-		/**
-		 * For security function
-		 */
-		public function encryptPassword($password){
-			$salt1 = "*&g!";
-			$salt2 = "hb%$";
-			$token = hash('ripemd128', "$salt1$password$salt2");
-			return $token;
-		}
 
 		//sanitazing from MySQL
 		public function mysql_fix_string($connection, $string)
@@ -85,27 +86,27 @@
 		private function validateUsername($un) {
 
 			if(strlen($un) > 25 || strlen($un) < 3) {
-				array_push($this->errorArray, Constants::$usernameCharacters);
+				array_push($this->errorArray, "Your username must be between 3 and 25 characters");
 				return;
 			}
 
 			$checkUsernameQuery = mysqli_query($this->con,"SELECT username FROM users WHERE username='$un'");
             if (mysqli_num_rows($checkUsernameQuery) != 0) {//Return the number of rows in a result set
-                array_push($this->errorArray, Constants::$usernameTaken);
+                array_push($this->errorArray, "Your username already exists");
                 return;
             }
 		}
 
 		private function validateFirstName($fn) {
 			if(strlen($fn) > 25 || strlen($fn) < 2) {
-				array_push($this->errorArray, Constants::$firstNameCharacters);
+				array_push($this->errorArray, "Your first name must be between 2 and 25 characters");
 				return;
 			}
 		}
 
 		private function validateLastName($ln) {
 			if(strlen($ln) > 25 || strlen($ln) < 2) {
-				array_push($this->errorArray, Constants::$lastNameCharacters);
+				array_push($this->errorArray, "Your last name must be between 2 and 25 characters");
 				return;
 			}
 		}
@@ -115,14 +116,14 @@
 		    /* The filter_var() function filters a variable with the specif ied filter. 
 			This function is used to both validate and sanitize the data. */
 			if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
-				array_push($this->errorArray, Constants::$emailInvalid);
+				array_push($this->errorArray, "Your email is invalid");
 				return;
 			}
 
 			//TODO: Check that username hasn't already been used
             $checkEmailQuery = mysqli_query($this->con,"SELECT email FROM users WHERE email='$em'");
             if (mysqli_num_rows($checkEmailQuery) != 0) {//Return the number of rows in a result set
-                array_push($this->errorArray, Constants::$emailTaken);
+                array_push($this->errorArray, "This email is already in use");
                 return;
             }
 		}
@@ -130,17 +131,17 @@
 		private function validatePasswords($pw, $pw2) {
 			
 			if($pw != $pw2) {
-				array_push($this->errorArray, Constants::$passwordsDoNoMatch);
+				array_push($this->errorArray, "Your passwords don't match");
 				return;
 			}
 
 			if(preg_match('/[^A-Za-z0-9]/', $pw)) {
-				array_push($this->errorArray, Constants::$passwordNotAlphanumeric);
+				array_push($this->errorArray, "Your password can only contain numbers and letters");
 				return;
 			}
 
 			if(strlen($pw) > 30 || strlen($pw) < 5) {
-				array_push($this->errorArray, Constants::$passwordCharacters);
+				array_push($this->errorArray, "Your password must be between 5 and 30 characters");
 				return;
 			}
 
