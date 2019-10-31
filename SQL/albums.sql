@@ -23,7 +23,7 @@ INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) VALUES
 (9, 'VUE.JS', 1, 8, 'assets/images/artwork/vuejs.png'),
 (10, 'Angular.JS', 1, 3, 'assets/images/artwork/angular.png'),
 (11, 'android', 4, 5, 'assets/images/artwork/android.png'),
-(12, 'Tommorrow', , , 'assets/images/artwork/album.png'),
-(13, 'VScode', , , 'assets/images/artwork/vs.png'),
-(14, 'Swift', , , 'assets/images/artwork/swift.png'),
-(15, 'Python', , , 'assets/images/artwork/python.png');
+(12, 'Tommorrow', 4, 3, 'assets/images/artwork/album.png'),
+(13, 'VScode', 1, 9, 'assets/images/artwork/vs.png'),
+(14, 'Swift', 2, 8, 'assets/images/artwork/swift.png'),
+(15, 'Python', 3, 6, 'assets/images/artwork/python.png');
