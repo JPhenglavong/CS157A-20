@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `albums` (
 INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) VALUES
 (1, 'Macbook Pro', 2, 4, 'assets/images/artwork/mbp.png'),
 (2, 'De Anza College', 5, 10, 'assets/images/artwork/react.png'),
-(3, 'Tom Zheng', 3, 1, 'assets/images/artwork/alb.jpg'),
+(3, 'Tom Zheng', 3, 1, 'assets/images/artwork/alb.png'),
 (4, 'IOS', 2, 9, 'assets/images/artwork/ios.png'),
 (5, 'MySQL', 1, 3, 'assets/images/artwork/mysql.png'),
 (6, 'JDBC', 3, 6, 'assets/images/artwork/java.png'),
