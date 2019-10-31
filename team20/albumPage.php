@@ -24,13 +24,12 @@ afterUserLogin();
 
 					<div id="mainViewComponent">
 						<div id="mainContent">
-							
+
 							<h1 class="pageHeadingBig">Weclome to Team20 Albums</h1>
 							<div class="gridViewContainer">
-								<?php 
-									$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND()");
-									getDataFromAlbums($albumQuery);
-								?>
+                            <?php
+                                idToBeSetted();
+                            ?>
 							</div>
 
 
@@ -51,6 +50,22 @@ afterUserLogin();
 			$userLoggedIn = $_SESSION['userLoggedIn'];
 		}else{
 			header("Location: register.php");
+		}
+    }
+    
+    function idToBeSetted(){
+		if(isset($_GET['id'])){
+            $albumID = $_GET['id'];
+            echo "id=" . $albumID;
+            //testing if get the id
+            echo '<br>';
+            echo 'Hello World!<br>';
+            echo 'Midterm for me is hard!<br>';
+            echo 'The last changce to get a good grade is trying my best to implement my project.<br>';
+            echo 'Are you ready?<br>';
+            echo 'Begin to listen to the music...<br>';
+		}else{
+			header("Location: index.php");
 		}
 	}
 ?>
