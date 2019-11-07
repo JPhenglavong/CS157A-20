@@ -63,6 +63,8 @@ CREATE TABLE `users` (
 Finding the PHP.ini (configurations setting type)/
 then change the upload_max_filesize to >10M for normal music /
 post_max_size also need to be changed to your designed MB
+![Screenshot_2](https://user-images.githubusercontent.com/45501926/68353253-dc1e1780-00bd-11ea-91da-7ec38a83abb3.png)
+
 ---
 
 
