@@ -58,3 +58,11 @@ CREATE TABLE `users` (
 ### Try to update songs
 ![](img/2019-11-05-13-12-59.png)
 ---
+
+### Modify PHP to upload more than 2MB as default of PHP
+Finding the PHP.ini (configurations setting type)/
+then change the upload_max_filesize to >10M for normal music /
+post_max_size also need to be changed to your designed MB
+---
+
+
