@@ -55,3 +55,10 @@ CREATE TABLE `users` (
 ![](img/2019-10-15-11-43-46.png)
 ---
 
+### updating UI with Login Register
+![](img/2019-11-12-10-52-32.png)
+---
+![](img/2019-11-12-10-52-48.png)
+---
+
+
