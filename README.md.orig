@@ -55,10 +55,23 @@ CREATE TABLE `users` (
 ![](img/2019-10-15-11-43-46.png)
 ---
 
+<<<<<<< HEAD
 ### updating UI with Login Register
 ![](img/2019-11-12-10-52-32.png)
 ---
 ![](img/2019-11-12-10-52-48.png)
+=======
+### Try to update songs
+![](img/2019-11-05-13-12-59.png)
+---
+
+### Modify PHP to upload more than 2MB as default of PHP
+Finding the PHP.ini (configurations setting type)/
+then change the upload_max_filesize to >10M for normal music /
+post_max_size also need to be changed to your designed MB
+![Screenshot_2](https://user-images.githubusercontent.com/45501926/68353253-dc1e1780-00bd-11ea-91da-7ec38a83abb3.png)
+
+>>>>>>> 67aa7c230a623708a1ac8a9a38ee2e308a60c4ee
 ---
 
 
