@@ -36,12 +36,6 @@ CREATE TABLE `users` (
 `#07D159`
 ---
 
-### `Login UI`
-![](img/2019-09-15-13-03-22.png)
----
-
-### `Register UI`
-![](img/2019-09-15-15-06-22.png)
 ---
 ![](img/2019-09-15-14-15-42.png)
 ---
@@ -58,9 +52,14 @@ CREATE TABLE `users` (
 ### updating UI with Login Register
 ![](img/2019-11-12-10-52-32.png)
 ---
+### `Register UI`
 ![](img/2019-11-12-10-52-48.png)
 ---
 ![](img/2019-11-21-11-05-22.png)
 ---
+![](img/2019-11-21-11-17-49.png)
+---
+
+
 - now can play a song under the background [Still Testing...]
 
