@@ -28,7 +28,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE MyISAM;
 ```
----
 
 
 ### `first we implement a streaming music project `
@@ -36,7 +35,6 @@ CREATE TABLE `users` (
 `#07D159`
 ---
 
----
 ![](img/2019-09-15-14-15-42.png)
 ---
 
