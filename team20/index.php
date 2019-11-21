@@ -5,9 +5,11 @@ include("includes/manipulateDatabase.php"); //maipulate data from our database
 //session_destroy();        //this function will make you every time log out
 
 afterUserLogin();
+
 ?>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">

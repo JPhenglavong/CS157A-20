@@ -34,9 +34,10 @@ body {
 
 #inputContainer{
     width: 410px;
+    /* padding: 45px; */
     padding: 45px;
     float: left;
-    border-right: 1px solid #ffffff;
+    /* border-right: 1px solid #ffffff; */
 }
 #inputContainer h2{
     text-align:center;
@@ -85,6 +86,7 @@ input[type="password"] {
 #registerForm,
 #loginForm{
     display: none;
+    margin-right: 52px;
 }
 
 #loginText{

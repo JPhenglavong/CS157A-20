@@ -7,7 +7,7 @@
 
 	$con = mysqli_connect("localhost", "root", "", "team20");
 	if($con){
-        echo "Connected database successfully";
+        // echo "Connected database successfully";
     }
 	if(mysqli_connect_errno()) {//Return an error description from the last connection error
 		echo "Failed to connect: " . mysqli_connect_errno();
