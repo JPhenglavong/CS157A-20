@@ -4,9 +4,11 @@ $con = mysqli_connect("localhost", "root", "", "team20");
 if($con){
     echo "Good Connection";
 }
+
 if(mysqli_connect_errno()) {//Return an error description from the last connection error
     echo "Failed to connect: " . mysqli_connect_errno();
 }
+
 echo "<br>";
 echo"Please upload one of your music to the below box";
 if(isset($_POST['submit'])){
@@ -16,7 +18,7 @@ if(isset($_POST['submit'])){
     move_uploaded_file($temp,"musics/".$name);
     $url = "http://localhost/team20/includes/musics/$name";
     //mysql_query("INSERT INTO 'music' VALUE ('','$name','$url')");
-    $insertMusic = mysqli_query($con, "INSERT INTO musicS VALUES ('','$name','$url')");
+    $insertMusic = mysqli_query($con, "INSERT INTO musics VALUES ('','$name','$url')");
     //echo "Good we get that music <br>";
     //mysql_query();
 }
@@ -49,5 +51,6 @@ if(isset($_POST['submit'])){
     </form>
 
 
+    <a href ="music.php"> Your music List </a>
 </body>
 </html>
