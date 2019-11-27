@@ -16,4 +16,4 @@ INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) VALUES
 (2, 'Overly Dedicated', 2, 1, 'resource/images/artwork/OverlyDedicatedFront.jpg'),
 (3, 'Feed Tha Streets', 3, 1, 'resource/images/artwork/FeedThaStreetsFront.jpg'),
 (4, 'Drug Funnie', 4, 1, 'resource/images/artwork/DrugFunnieFront.jpg'),
-(5, 'Michael Wu Number Ones', 5, 1, 'resource/images/artwork/MichaelWuNumberOnesFront.jpg');
+(5, 'Michael Wu Number Ones', 5, 2, 'resource/images/artwork/MichaelWuNumberOnesFront.jpg');
