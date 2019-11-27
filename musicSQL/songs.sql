@@ -12,9 +12,7 @@ CREATE TABLE IF NOT EXISTS `songs` (
 ) ENGINE=InnoDB;
 
 
-
 INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
-/*
 (1, '2Face', 1, 1, 1, '4:46', 'resource/music/Friday Night Lights/2Face.mp3', 1, 0),
 (2, 'Back To The Topic Freestyle', 1, 1, 1, '3:00', 'resource/music/Friday Night Lights/Back To The Topic Freestyle.mp3', 2, 0),
 (3, 'Before Im Gone', 1, 1, 1, '4:24', 'resource/music/Friday Night Lights/Before Im Gone.mp3', 3, 0),
@@ -34,5 +32,9 @@ INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `pat
 
 (15, '5 Minutes of Funktown', 4, 4, 1, '5:01', 'resource/music/Drug Funnie/5 Minutes of Funktown.mp3', 1, 0),
 (16, 'Come And Talk To Me', 4, 4, 1, '3:16', 'resource/music/Drug Funnie/Come And Talk To Me.mp3', 2, 0),
-(17, 'Foreal Foreal', 4, 4, 1, '3:20', 'resource/music/Drug Funnie/Foreal Foreal.mp3', 3, 0);
-*/
+(17, 'Foreal Foreal', 4, 4, 1, '3:20', 'resource/music/Drug Funnie/Foreal Foreal.mp3', 3, 0),
+
+(18, 'Billie Jean', 5, 5, 2, '6:23', 'resource/music/Number Ones/Billie Jean.mp3', 1, 0),
+(19, 'Dont Stop Til You Get You Get Enough', 5, 5, 2, '3:58', 'resource/music/Number Ones/Dont Stop Til You Get Enough.mp3', 2, 0);
+
+

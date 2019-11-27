@@ -24,8 +24,8 @@ afterUserLogin();
 	<body>
 		<script>
 			var audioElement = new songAudio();
-			audioElement.setTrack("resource/music/Drug Funnie/5 Minutes of Funktown.mp3");
-			//audioElement.audio.play();
+			audioElement.setTrack("resource/music/Number Ones/Dont Stop Til You Get Enough.mp3");
+			audioElement.audio.play();
 		</script>
 
 			<div id="background">
