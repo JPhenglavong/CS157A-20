@@ -25,7 +25,7 @@ afterUserLogin();
 		<script>
 			var audioElement = new songAudio();
 			audioElement.setTrack("resource/music/Number Ones/Dont Stop Til You Get Enough.mp3");
-			audioElement.audio.play();
+			//audioElement.audio.play();
 		</script>
 
 			<div id="background">
@@ -56,7 +56,7 @@ afterUserLogin();
 
 								<div class="rightPart">
 									<h1><?php echo getAlbumTitle($con, $albumId); ?></h1>
-									<h2>Music By <?php echo getArtistName($con, $albumId); ?></h2>
+									<h2><?php echo getArtistName($con, $albumId); ?></h2>
 									<p>Number of Songs: <?php echo getNumbersOfSongs($con, $albumId); ?></p>
 								</div>
 

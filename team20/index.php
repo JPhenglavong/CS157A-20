@@ -27,7 +27,7 @@ afterUserLogin();
 					<div id="mainViewComponent">
 						<div id="mainContent">
 							
-							<h1 class="pageHeadingBig">Weclome to Team20 Albums</h1>
+							<h1 class="pageHeadingBig">Welcome to Team20 Albums</h1>
 							<div class="gridViewContainer">
 								<?php 
 									$albumQuery = mysqli_query($con, "SELECT * FROM albums");
