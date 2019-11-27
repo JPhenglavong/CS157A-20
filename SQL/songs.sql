@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `songs` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
-
+--Separated artists by spaces just to avoid confusinon
 
 INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
 (1, '2Face', 1, 1, 1, '4:46', 'resource/music/Friday Night Lights/2Face.mp3', 1, 0),
