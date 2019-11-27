@@ -11,8 +11,8 @@ afterUserLogin();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/albums.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 	</head>
 
@@ -30,7 +30,7 @@ afterUserLogin();
 							<h1 class="pageHeadingBig">Weclome to Team20 Albums</h1>
 							<div class="gridViewContainer">
 								<?php 
-									$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND()");
+									$albumQuery = mysqli_query($con, "SELECT * FROM albums");
 									getDataFromAlbums($albumQuery);
 								?>
 							</div>

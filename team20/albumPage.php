@@ -14,18 +14,18 @@ afterUserLogin();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/song.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/albums.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/song.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-		<script src="assets/js/songAudio.js"></script>
+		<script src="resource/js/songAudio.js"></script>
 	</head>
 
 	<body>
 		<script>
 			var audioElement = new songAudio();
-			audioElement.setTrack("assets/music/ByeByeBye.mp3");
-			audioElement.audio.play();
+			audioElement.setTrack("resource/music/Drug Funnie/5 Minutes of Funktown.mp3");
+			//audioElement.audio.play();
 		</script>
 
 			<div id="background">
@@ -55,9 +55,9 @@ afterUserLogin();
 								</div>
 
 								<div class="rightPart">
-									<h2><?php echo getAlbumTitle($con, $albumId); ?></h2>
-									<p>Designed By <?php echo getArtistName($con, $albumId); ?></p>
-									<p><?php echo getNumbersOfSongs($con, $albumId); ?></p>
+									<h1><?php echo getAlbumTitle($con, $albumId); ?></h1>
+									<h2>Music By <?php echo getArtistName($con, $albumId); ?></h2>
+									<p>Number of Songs: <?php echo getNumbersOfSongs($con, $albumId); ?></p>
 								</div>
 
 							</div>
@@ -67,29 +67,30 @@ afterUserLogin();
 
 									<?php
 									$songIdArray = getSongIds($con, $albumId);
-									$i = 1;
-									foreach($songIdArray as $albumId) {
+									$albumArtist = getArtistName($con, $albumId);
+									$albumIdSongIncrementer = $albumArtist;
+									$trackNumber = 1;
+									foreach($songIdArray as $albumIdSongIncrementer) {
 
-										$albumSong = new Song($con, $albumId);
-										$albumArtist = getArtistName($con, $albumId);
+										$albumSong = new Song($con, $albumIdSongIncrementer);
 
 										echo "<li class='tracklistRow'>
 												<div class='trackCount'>
-													<img class='play-btn' src='assets/images/icons/play-btn.png'>
-													<span class='trackNumber'>$i</span>
+													<img class='play-btn' src='resource/images/icons/play-btn.png'>
+													<span class='trackNumber'>$trackNumber</span>
 												</div>
 												<div class='trackInfo'>
 													<span class='trackName'>" . $albumSong->getTitle() . "</span>
 													<span class='artistName'>" . $albumArtist . "</span>
 												</div>
 												<div class='trackOptions'>
-													<img class='optionsButton' src='assets/images/icons/more.png'>
+													<img class='optionsButton' src='resource/images/icons/more.png'>
 												</div>
 												<div class='trackDuration'>
 													<span class='duration'>" . $albumSong->getDuration() . "</span>
 												</div>
 											</li>";
-										$i = $i + 1;
+										$trackNumber++;
 									}
 									?>
 								</ul>

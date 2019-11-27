@@ -5,16 +5,17 @@
         <div id="nowPlayingLeft">
                 <div class="content">
                     <span class="albumLink">
-                        <img src="assets/images/icons/react.png" class="albumArtwork">
+                    <img src="<?php echo getArtworkPath($con, $albumId); ?>" class="albumArtwork">
+                        
                     </span>
 
                     <div class="trackInfo">
                         <span class="trackName">
-                            <span>Team 20</span>
+                            <span><?php echo $albumSong->getTitle()?></span>
                         </span>
 
                         <span class="artistName">
-                            <span>Team 20</span>
+                            <span><?php echo getArtistName($con, $albumId); ?></span>
                         </span>
                     </div>
 
@@ -27,22 +28,22 @@
 
                     <div class="buttons">
                         <button class="controlButton shuffle" title="Shuffle button">
-                            <img src="assets/images/icons/shuffle.png" alt="Shuffle">
+                            <img src="resource/images/icons/shuffle.png" alt="Shuffle">
                         </button>
                         <button class="controlButton previous" title="Previous button">
-                            <img src="assets/images/icons/previous.png" alt="Previous">
+                            <img src="resource/images/icons/previous.png" alt="Previous">
                         </button>
                         <button class="controlButton play" title="Play button">
-                            <img src="assets/images/icons/play.png" alt="Play">
+                            <img src="resource/images/icons/play.png" alt="Play">
                         </button>
                         <button class="controlButton pause" title="Pause button" style="display: none;">
-                            <img src="assets/images/icons/pause.png" alt="Pause">
+                            <img src="resource/images/icons/pause.png" alt="Pause">
                         </button>
                         <button class="controlButton next" title="Next button">
-                            <img src="assets/images/icons/next.png" alt="Next">
+                            <img src="resource/images/icons/next.png" alt="Next">
                         </button>
                         <button class="controlButton repeat" title="Repeat button">
-                            <img src="assets/images/icons/repeat.png" alt="Repeat">
+                            <img src="resource/images/icons/repeat.png" alt="Repeat">
                         </button>
                     </div>
 
@@ -66,7 +67,7 @@
                 <div class="volumeBar">
 
                     <button class="controlButton volume" title="Volume button">
-                        <img src="assets/images/icons/volume.png" alt="Volume">
+                        <img src="resource/images/icons/volume.png" alt="Volume">
                     </button>
 
                     <div class="progressBar">

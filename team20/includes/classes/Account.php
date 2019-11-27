@@ -75,7 +75,7 @@
 //			$encryptedPw = md5($pw);            //Password ->  8b1a9953c4611296a827abf8c47804d7
 			//or we w3c school find the example, md5 is a  The MD5 Message-Digest Algorithm
             $encryptedPw = sha1($pw); //The sha1() function uses the US Secure Hash Algorithm 1.
-			$profilePic = "assets/images/profile/head.png";
+			$profilePic = "resource/images/profile/head.png";
 			$date = date("Y-m-d");
 
 			$result = mysqli_query($this->con, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");

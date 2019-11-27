@@ -20,7 +20,6 @@
 		public function __construct($con, $id) {
 			$this->connect = $con;
 			$this->id = $id;
-
 			$query = mysqli_query($this->connect, "SELECT * FROM songs WHERE id='$this->id'");
 			$this->mysqli = mysqli_fetch_array($query);
 			$this->title = $this->mysqli['title'];
@@ -51,7 +50,6 @@
 		public function getDuration() {
 			return $this->duration;
 		}
-
 
 		/**
 		 * get the mysqli function

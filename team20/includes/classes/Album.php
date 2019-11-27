@@ -22,14 +22,14 @@
     }
 
     function getNumbersOfSongs($connect, $ID){
-        $query = mysqli_query($connect, "SELECT id FROM Songs WHERE album='$ID'");
+        $query = mysqli_query($connect, "SELECT id FROM songs WHERE album='$ID'");
         return mysqli_num_rows($query);
     }
     
 
 	function getSongIds($connect, $ID) {
 
-        $query = mysqli_query($connect, "SELECT id FROM Songs WHERE album='$ID' ORDER BY albumOrder ASC");
+        $query = mysqli_query($connect, "SELECT id FROM songs WHERE album='$ID' ORDER BY albumOrder ASC");
         
 		$array = array();
 		while($row = mysqli_fetch_array($query)) {
