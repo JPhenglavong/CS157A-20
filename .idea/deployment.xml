@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Sasever">
+    <serverData>
+      <paths name="Sasever">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\CS157A-20" local="$PROJECT_DIR$" web="/CS157A-20" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
