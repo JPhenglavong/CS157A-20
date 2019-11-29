@@ -25,7 +25,7 @@ INSERT INTO `Songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `pat
 (6, 'Seventy-Seven', 2, 1, 1, '3:06', 'resource/music/Seventy-Seven.mp3', 1, 0),
 (7, 'In Need', 2, 4, 2, '3:40', 'resource/music/In_Need.mp3', 2, 0),
 (8, 'Tomorrow', 2, 1, 3, '3:20', 'resource/music/Tomorrow.mp3', 2, 0),
-(9, 'Extreme Action', 2, 1, 4, '8:03', 'resource/music/bensound-extremeaction.mp3', 3, 0),
+(9, 'Extreme Action', 2, 1, 4, '4:20', 'resource/music/Strength_Of_A_Thousand_Men.mp3', 3, 0),
 (10, 'Viva La Vida', 2, 4, 5, '2:08', 'resource/music/Intro.mp3', 3, 0),
 (11, 'Energy', 2, 1, 6, '2:08', 'resource/music/Intro.mp3', 4, 0),
 (12, 'Dubstep', 2, 1, 7, '2:08', 'resource/music/Intro.mp3', 5, 0),
