@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `Songs` (
-    `id` int(11) NOT NULL,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
     `title` varchar(250) NOT NULL,
     `artist` int(11) NOT NULL,
     `album` int(11) NOT NULL,
