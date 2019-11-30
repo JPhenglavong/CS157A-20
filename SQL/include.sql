@@ -20,3 +20,6 @@ values
 (14,12),
 (13,10)
 ;
+
+alter table include add foreign key (albumID) references albums(id);
+alter table include add foreign key (songID) references songs(id);
