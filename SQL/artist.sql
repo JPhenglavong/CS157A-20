@@ -18,8 +18,8 @@ INSERT INTO artists (id, name) VALUES
 (10, 'Michael Scofield Prison Break'),
 (11, 'Mickey Mouse'),
 (12, 'Tim Cook'),
-(13, 'Clinton'),
-(14, 'Einstein'),
-(15, 'Newton'),
-(16, 'Tesla'),
-(17, 'Lilith');
+(13, 'J. Cole'),
+(14, 'Kendrick Lamar'),
+(15, 'Roddy Ricch'),
+(16, 'Ezale'),
+(17, 'Michael Wu');
