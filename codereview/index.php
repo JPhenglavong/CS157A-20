@@ -1,16 +1,20 @@
 <?php
-include("includes/config.php");//run session_start() firstly
+include("src/config.php");//run session_start() firstly
+include("src/manipulateDatabase.php"); //maipulate data from our database
 
 //session_destroy();        //this function will make you every time log out
 
 afterUserLogin();
+
 ?>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/albums.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+		<script src="resource/js/songAudio.js"></script>
 	</head>
 
 	<body>
@@ -27,27 +31,16 @@ afterUserLogin();
 							<h1 class="pageHeadingBig">Weclome to Team20 Albums</h1>
 							<div class="gridViewContainer">
 								<?php 
-									$albumQuery = mysqli_query($con, "SELECT * FROM albums");
-									while($row = mysqli_fetch_array($albumQuery)){
-										echo "<div class='gridViewItem'>
-												<a href='album.php?id=" . $row['id'] . "'>
-													<img src='" . $row['artworkPath'] . "'>
-						
-													<div class='gridViewInfo'>"
-														. $row['title'] .
-													"</div>
-												</a>
-											</div>";
-									}
+									$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND()");
+									getDataFromAlbums($albumQuery);
 								?>
 							</div>
 
 
 						</div>
 					</div>
-
 				</div>
-				<?php include("components/nowPlayingBarComponent.php"); ?>
+				<?php include("components/playingBarComponent.php"); ?>
 
 			</div>
 	</body>
