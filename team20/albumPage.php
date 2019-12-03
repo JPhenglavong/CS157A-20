@@ -1,10 +1,10 @@
 <?php
-include("includes/config.php");//run session_start() firstly
-include("includes/manipulateDatabase.php"); //maipulate data from our database
+include("src/config.php");//run session_start() firstly
+include("src/manipulateDatabase.php"); //maipulate data from our database
 
-include("includes/classes/Artists.php");
-include("includes/classes/Album.php");
-include("includes/classes/Songs.php");
+include("src/classes/Artists.php");
+include("src/classes/Album.php");
+include("src/classes/Songs.php");
 
 //session_destroy();        //this function will make you every time log out
 
@@ -14,19 +14,23 @@ afterUserLogin();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/song.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/albums.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/song.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-		<script src="assets/js/songAudio.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js" 
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+		<script src="resource/js/songAudio.js"></script>
+		<script src="resource/js/playing.js"></script>
+
 	</head>
 
 	<body>
-		<script>
-			var audioElement = new songAudio();
-			audioElement.setTrack("assets/music/ByeByeBye.mp3");
-			audioElement.audio.play();
-		</script>
+		<!-- <script>
+			var songAudioElement = new songAudio("resource/music/ByeByeBye.mp3");
+			songAudioElement.playBGM();
+		</script> -->
 
 			<div id="background">
 				<div id="mainComponent">
@@ -75,18 +79,18 @@ afterUserLogin();
 
 										echo "<li class='tracklistRow'>
 												<div class='trackCount'>
-													<img class='play-btn' src='assets/images/icons/play-btn.png'>
+													<img class='play-btn' src='resource/images/icons/play-btn.png'>
 													<span class='trackNumber'>$i</span>
 												</div>
 												<div class='trackInfo'>
-													<span class='trackName'>" . $albumSong->getTitle() . "</span>
-													<span class='artistName'>" . $albumArtist . "</span>
+													<div class='trackName'>" . $albumSong->getTitle() . "</div>
+													<div class='artistName'>" . $albumArtist . "</div>
 												</div>
 												<div class='trackOptions'>
-													<img class='optionsButton' src='assets/images/icons/more.png'>
+													<img class='optionsButton' src='resource/images/icons/more.png'>
 												</div>
 												<div class='trackDuration'>
-													<span class='duration'>" . $albumSong->getDuration() . "</span>
+													<div class='duration'>" . $albumSong->getDuration() . "</div>
 												</div>
 											</li>";
 										$i = $i + 1;
@@ -99,7 +103,7 @@ afterUserLogin();
 					</div>
 
 				</div>
-				<?php include("components/nowPlayingBarComponent.php"); ?>
+				<?php include("components/playingBarComponent.php"); ?>
 			</div>
 	</body>
 </html>

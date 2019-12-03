@@ -1,6 +1,6 @@
 <?php
-include("includes/config.php");//run session_start() firstly
-include("includes/manipulateDatabase.php"); //maipulate data from our database
+include("src/config.php");//run session_start() firstly
+include("src/manipulateDatabase.php"); //maipulate data from our database
 
 //session_destroy();        //this function will make you every time log out
 
@@ -11,9 +11,10 @@ afterUserLogin();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Welcome to Team20!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/albums.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<link rel="stylesheet" type="text/css" href="resource/css/albums.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+		<script src="resource/js/songAudio.js"></script>
 	</head>
 
 	<body>
@@ -38,9 +39,8 @@ afterUserLogin();
 
 						</div>
 					</div>
-
 				</div>
-				<?php include("components/nowPlayingBarComponent.php"); ?>
+				<?php include("components/playingBarComponent.php"); ?>
 
 			</div>
 	</body>
