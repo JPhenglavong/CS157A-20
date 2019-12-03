@@ -41,7 +41,12 @@ Khoa Pham
 
 
 - now can play a song under the background [Still Testing...]
-- 
 ![](img/2019-11-24-21-03-34.png)
-- can output the album pic and song's title, artist
-- but still a little mistake
+![](img/2019-12-02-16-11-17.png)
+![](img/2019-12-02-16-52-47.png)
+![](img/2019-12-02-16-53-00.png)
+![](img/2019-12-02-16-53-43.png)
+---
+### JDBC + DataStructure + Object-Oriented
+![](img/2019-12-02-16-54-20.png)
+![](img/2019-12-02-16-55-16.png)
