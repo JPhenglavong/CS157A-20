@@ -1,0 +1,52 @@
+#container h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+button.btn.btn-info.btn-sm.ml-3.mr-1{
+    background-color: transparent;
+    width: 90px;
+}
+button.btn.btn-danger.btn-sm{
+	background-color: transparent;
+	width: 90px;
+	 margin: 0 10px;
+}
+input.btn.btn-primary.btn-sm.mb-3{
+    background-color: transparent;
+    width: 90px;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 50px 100px;
+}
+.form-control {
+    background-color: transparent;
+    border-radius: 6px;
+
+}
+.col-4 {
+    max-width: 26.333333%;
+}
+.col-2 {
+    max-width: 14.666667%;
+}
+.btn-info {
+    /* background-color: #17a2b8; */
+    background-color: transparent;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    /* border-top: 1px solid rgba(0,0,0,.1); */
+    border-top: 1.5px solid #ced4da; 
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}

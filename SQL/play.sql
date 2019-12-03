@@ -2,6 +2,8 @@ CREATE TABLE IF NOT EXISTS play (
     userID int(11) NOT NULL,
      songID int(11) NOT NULL
 ) ENGINE=InnoDB;
+  alter table play add foreign key (userID) references users(id);
+  alter table play add foreign key (songID) references songs(id);
 
 select * from play;
 
