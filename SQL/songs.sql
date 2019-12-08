@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `songs` (
 -- (18, 'Billie Jean', 5, 5, 2, '6:23', 'resource/music/Number Ones/Billie Jean.mp3', 1, 0),
 -- (19, 'Dont Stop Til You Get You Get Enough', 5, 5, 2, '3:58', 'resource/music/Number Ones/Dont Stop Til You Get Enough.mp3', 2, 0);
 
-INSERT INTO `Songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
+INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
 (1, 'Intro', 1, 5, 8, '2:08', 'resource/music/Intro.mp3', 1, 0),
 (2, 'Dream of A Day', 1, 5, 1, '3:00', 'resource/music/Dream_of_A_Day.mp3', 2, 0),
 (3, 'Tom LongLive Viva La Vida', 1, 5, 2, '1:34', 'resource/music/Tom.mp3', 3, 0),
