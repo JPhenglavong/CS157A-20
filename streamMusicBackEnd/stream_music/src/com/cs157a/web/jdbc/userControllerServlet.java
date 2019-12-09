@@ -1,0 +1,244 @@
+package com.cs157a.web.jdbc;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+
+/**
+ * Servlet implementation class userControllerServlet
+ */
+@WebServlet("/userControllerServlet")
+public class userControllerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	private UserDdatabaseUtil userDbUtil; 
+
+	
+	//Define datasource/connection pool for Resource Injection
+	@Resource(name="jdbc/team20")
+	private DataSource dataSource;
+
+	
+	
+	@Override
+	public void init() throws ServletException {
+		super.init();
+		
+		//create our user db util ... and pass in the conn poll / datasource
+		try {
+			userDbUtil = new UserDdatabaseUtil(dataSource);
+		}catch(Exception e) {
+			throw new ServletException(e);
+		}
+	}
+
+
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		try {
+			//read the "command" parameter
+			String theCommand = request.getParameter("command");
+			
+			// if the command is missing, then default to listing users
+			if (theCommand == null) {
+				theCommand = "LIST";
+			}
+			
+			// route to the appropriate method
+			switch (theCommand) {
+			
+				case "LIST":
+					listUsers(request, response);
+					break;
+					
+				case "ADD":
+					addUsers(request, response);
+					break;
+					
+				case "LOAD":
+					loadUsers(request, response);
+					break;
+					
+				case "UPDATE":
+					updateUsers(request, response);
+					break;
+				
+				case "DELETE":
+					delete(request, response);
+					break;
+				
+				case "LAMBDA_EXPRESSION_SORT_USERNAME":
+					λLambdaExpressionSortByUsername(request, response);
+					break;
+				
+				case "LAMBDA_EXPRESSION_SORT_EMAIL":
+					λLambdaExpressionSortByEmail(request, response);
+					break;
+
+				case "HEAP_SORT_ID":
+					heapSortByUserId(request, response);
+					break;
+					
+				default:
+					listUsers(request, response);
+			}
+				
+		}
+		catch (Exception e) {
+			throw new ServletException(e);
+		}
+	}
+
+
+
+	private void heapSortByUserId(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		//get users from db util
+		ArrayList<user> users = userDbUtil.getUsersBySortID();
+		
+		//add users to the request
+		request.setAttribute("USER_LIST", users);
+		
+		//send to JSP page(view)
+		RequestDispatcher sender = request.getRequestDispatcher("/list-users.jsp");
+		sender.forward(request, response);
+		
+	}
+
+
+
+	private void λLambdaExpressionSortByEmail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		// TODO Auto-generated method stub
+		
+		//get users from db util
+		ArrayList<user> users = userDbUtil.getλLambdaSortByEmailUsersList();
+		
+		//add users to the request
+		request.setAttribute("USER_LIST", users);
+		
+		//send to JSP page(view)
+		RequestDispatcher sender = request.getRequestDispatcher("/list-users.jsp");
+		sender.forward(request, response);
+		
+	}
+
+
+
+	private void λLambdaExpressionSortByUsername(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		//get users from db util
+		ArrayList<user> users = userDbUtil.getλLambdaSortUsersList();
+		
+		//add users to the request
+		request.setAttribute("USER_LIST", users);
+		
+		//send to JSP page(view)
+		RequestDispatcher sender = request.getRequestDispatcher("/list-users.jsp");
+		sender.forward(request, response);
+	}
+
+
+
+	private void delete(HttpServletRequest request, HttpServletResponse response) throws Exception{
+		 
+		// read user id from form data
+		String theUserId = request.getParameter("userId");
+		
+		// delete user from database
+		userDbUtil.deleteUser(theUserId);
+		
+		// send them back to "list users" page
+		listUsers(request, response);
+		
+	}
+
+
+
+	private void updateUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// read user info from form data
+		int id = Integer.parseInt(request.getParameter("userId"));
+		String username = request.getParameter("username");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String email = request.getParameter("email");
+		
+		// create a new user object
+		user theUser = new user(id, username, firstName, lastName, email);
+		
+		// perform update on database
+		userDbUtil.updateUser(theUser);
+		
+		// send them back to the "list user" page
+		listUsers(request, response);
+		
+	}
+
+
+
+	private void loadUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// read user id from form data
+		String theUserId = request.getParameter("userId");
+		
+		// get user from database (db util)
+		user theUser = userDbUtil.getUser(theUserId);
+		
+		// place user in the request attribute
+		request.setAttribute("THE_USER", theUser);
+		
+		// send to jsp page: updateUserform.jsp
+		RequestDispatcher dispatcher = 
+				request.getRequestDispatcher("/updateUserForm.jsp");
+		dispatcher.forward(request, response);	
+		
+	}
+
+
+
+	private void addUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+				// read student info from form data
+				String userName = request.getParameter("username");
+				String firstName = request.getParameter("firstName");
+				String lastName = request.getParameter("lastName");
+				String email = request.getParameter("email");		
+				
+				// create a new user object
+				user theUser = new user(userName, firstName, lastName, email);
+				
+				// add the user to the database
+				userDbUtil.addUser(theUser);
+						
+				// send back to main page (the user list)
+				listUsers(request, response);
+		
+	}
+
+
+
+	private void listUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		
+		//get users from db util
+		ArrayList<user> users = userDbUtil.getUsers();
+		
+		//add users to the request
+		request.setAttribute("USER_LIST", users);
+		
+		//send to JSP page(view)
+		RequestDispatcher sender = request.getRequestDispatcher("/list-users.jsp");
+		sender.forward(request, response);
+	}
+
+}
