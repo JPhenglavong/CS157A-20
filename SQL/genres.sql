@@ -4,20 +4,29 @@ CREATE TABLE IF NOT EXISTS `genres` (
 ) ENGINE=InnoDB;
 
 
-
 INSERT INTO `genres` (`id`, `name`) VALUES
-(1, 'dolphin vocal sound'),
-(2, 'comic cartoon music'),
-(3, 'Hip-hop'),
-(4, 'Rap'),
-(5, 'R & B'),
-(6, 'Classical'),
-(7, 'Techno'),
-(8, 'Jazz'),
-(9, 'Folk'),
-(10, 'Country'),
-(11, 'Rock'),
-(12, 'Pop'),
-(13, 'canon'),
-(14, 'Bach'),
-(15, 'piano');
+(1, 'Rap'),
+(2, 'Pop'),
+(3, 'Country'),
+(4, 'Electropop'),
+(5, 'Dance-pop'),
+(6, 'Korean Ballad'),
+(7, 'Chinese Melodies'),
+(8, 'KPop'),
+(9, 'Rock'),
+(10, 'Soul'),
+(11, 'Vietnamese'),
+(12, 'Thai'),
+(13, 'Thai Rock'),
+(14, 'Gangsta Rap'),
+(15, 'R&B');
+
+
+
+
+
+
+
+
+
+
