@@ -271,7 +271,7 @@ public class UserDdatabaseUtil {
 
 	}
 
-	public ArrayList<user> getλLambdaSortByEmailUsersList() throws SQLException{
+	public ArrayList<user> getSqlQuerySortByEmailUsersList() throws SQLException{
 		ArrayList<user> users = new ArrayList<>();
 		
 		Connection conn = null;
@@ -282,7 +282,7 @@ public class UserDdatabaseUtil {
 			//get a connection
 			conn = dataSource.getConnection();
 			//create sql statemnt
-			String sql = "SELECT * FROM users";
+			String sql = "SELECT * FROM users ORDER BY email";
 			stmt = conn.createStatement();
 			//execute query
 			rs = stmt.executeQuery(sql);
@@ -301,7 +301,7 @@ public class UserDdatabaseUtil {
 				//add it to the list of users
 				users.add(tempUser);
 			}
-			Collections.sort(users, user.comparatorByEmail(true));
+//			Collections.sort(users, user.comparatorByEmail(true));
 
 			return users;
 			

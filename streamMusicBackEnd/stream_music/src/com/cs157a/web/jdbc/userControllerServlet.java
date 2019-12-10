@@ -84,8 +84,8 @@ public class userControllerServlet extends HttpServlet {
 					λLambdaExpressionSortByUsername(request, response);
 					break;
 				
-				case "LAMBDA_EXPRESSION_SORT_EMAIL":
-					λLambdaExpressionSortByEmail(request, response);
+				case "SQL_QUERY_SORT_EMAIL":
+					sqlQuerySortByEmail(request, response);
 					break;
 
 				case "HEAP_SORT_ID":
@@ -119,11 +119,11 @@ public class userControllerServlet extends HttpServlet {
 
 
 
-	private void λLambdaExpressionSortByEmail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+	private void sqlQuerySortByEmail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		// TODO Auto-generated method stub
 		
 		//get users from db util
-		ArrayList<user> users = userDbUtil.getλLambdaSortByEmailUsersList();
+		ArrayList<user> users = userDbUtil.getSqlQuerySortByEmailUsersList();
 		
 		//add users to the request
 		request.setAttribute("USER_LIST", users);

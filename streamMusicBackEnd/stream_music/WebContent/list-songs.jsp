@@ -44,14 +44,8 @@
 												</div>
 												<div class="navItem">
 													<!-- <a href="http://localhost:8080" class="navItemLink">Team 20</a> -->
-													<button class="navItemLinkBtn" onclick="window.location.href = 'http://localhost:8080';">
+													<button class="navItemLinkBtn" onclick="window.location.href = 'https://novemberfall.github.io/musicChat/';">
 														Chat to Team20
-													</button>
-												</div>
-												<div class="navItem">
-													<!-- <a href="http://localhost:3000" class="navItemLink">User Defined</a> -->
-													<button class="navItemLinkBtn" onclick="window.location.href = 'http://localhost:3000';">
-                                                        Engineer Defined
 													</button>
 												</div>
 											</div>

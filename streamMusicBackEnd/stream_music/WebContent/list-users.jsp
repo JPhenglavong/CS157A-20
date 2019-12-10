@@ -25,8 +25,8 @@
 						
 											<div class="group">
 												<div class="navItem">
-													<a href="http://localhost:8080/stream_music/" class="navItemLink">Search
-														<img src="img/search.png" class="icon" alt="Search">
+													<a href="http://localhost:8080/stream_music/" class="navItemLink">Stream Music
+														<img src="img/music.png" class="icon" alt="Search">
 													</a>
 												</div>
 											</div>
@@ -44,14 +44,8 @@
 												</div>
 												<div class="navItem">
 													<!-- <a href="http://localhost:8080" class="navItemLink">Team 20</a> -->
-													<button class="navItemLinkBtn" onclick="window.location.href = 'http://localhost:8080';">
+													<button class="navItemLinkBtn" onclick="window.location.href = 'https://novemberfall.github.io/musicChat/';">
 														Chat To Team20
-													</button>
-												</div>
-												<div class="navItem">
-													<!-- <a href="http://localhost:3000" class="navItemLink">User Defined</a> -->
-													<button class="navItemLinkBtn" onclick="window.location.href = 'http://localhost:3000';">
-														Engineer Defined
 													</button>
 												</div>
 												<div class="navItem">
@@ -122,8 +116,8 @@
 													<c:param name="userId" value="${tempUser.id}"/>
 												</c:url>	
 												<!-- set up a link to lambda Sort a user -->
-												<c:url var="LambdaSortEmailLink" value="userControllerServlet">
-													<c:param name="command" value="LAMBDA_EXPRESSION_SORT_EMAIL"/>
+												<c:url var="sqlQuerySortEmailLink" value="userControllerServlet">
+													<c:param name="command" value="SQL_QUERY_SORT_EMAIL"/>
 													<c:param name="userId" value="${tempUser.id}"/>
 												</c:url>	
 
@@ -168,7 +162,7 @@
 															
 															<div class="col-small">																		
 																<button type="submit" class="btn btn-danger btn-sm"
-																onclick=" window.location.href = '${LambdaSortEmailLink}'; ">lambdaMail
+																onclick=" window.location.href = '${sqlQuerySortEmailLink}'; ">sqlSortMail
 																</button>
 															</div>	
 
