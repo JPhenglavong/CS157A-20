@@ -1,0 +1,110 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+body {
+    /* background-color: #181818; */
+    font-size: 14px;
+    min-width: 720px;
+}
+
+#mainViewComponent{
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
+}
+#mainContent{
+    /* padding: 20px 25px; */
+    padding: 20px 60px;
+}
+
+#background {
+    background-color: #000;
+    background-image: url("../img/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+
+
+#topComponent {
+	min-height: 100%;
+	width: 100%;
+}
+
+#navBarComponent {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* border-right: 1px solid #ffffff; */
+}
+
+.navBar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.navBar .group {
+    border-top: 1px solid #fff;
+    padding: 10px 0;
+    /* border-bottom: 1px solid #fff; */
+}
+
+.navItem {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.navItemLink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navItemLink .icon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 25px;
+}
+
+.navItemLink:hover{
+    color: #fff;
+}
+
+.navItemLinkBtn{
+    background: transparent;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 155px;
+    border: 1.6px solid #ffffff;
+}
+
+#browse{
+    margin-top: 25px;
+}
