@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-/Users/Git/gitjspmusic/musicBEmbp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/892568318.index
-/music_stream/src
-/Users/Git/gitjspmusic/musicBEmbp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3067573337.index
-/stream_music/src
